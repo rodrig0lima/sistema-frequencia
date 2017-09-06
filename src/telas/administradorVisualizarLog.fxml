@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdministradorVisualizarLogController">
+    <children>
+      <MenuBar prefHeight="25.0" prefWidth="800.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Arquivo">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#administradorPrincipal" text="Início" />
+                  <MenuItem mnemonicParsing="false" onAction="#sair" text="Sair" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Funcionários">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#administradorCadastrarFuncionario" text="Cadastrar Funcionário" />
+                  <MenuItem mnemonicParsing="false" onAction="#administradorListarFuncionarios" text="Listar Funcionarios" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Relatórios">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#administradorListarFrequenciasPorMes" text="Listas de frequência mensais" />
+                  <MenuItem mnemonicParsing="false" onAction="#administradorListarFrequenciaPorFuncionario" text="Listas de frequência por funcionário" />
+                  <MenuItem mnemonicParsing="false" onAction="#administradorVisualizarLog" text="Visualizar log de atividades" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ajuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#sobre" text="Sobre" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="145.0" layoutY="50.0" text="Visualizar Registro de atividades">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="168.0" text="Funcionário:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nome" layoutX="122.0" layoutY="166.0" onAction="#buscar" onKeyReleased="#buscar" onKeyTyped="#buscar" prefHeight="25.0" prefWidth="418.0" />
+      <TableView fx:id="tabelaLog" layoutX="39.0" layoutY="203.0" prefHeight="329.0" prefWidth="726.0">
+         <columns>
+            <TableColumn fx:id="colunaNome" prefWidth="122.0" text="Funcionário" />
+            <TableColumn fx:id="colunaData" prefWidth="70.0" text="Data" />
+            <TableColumn fx:id="colunaHora" prefWidth="58.0" text="Hora" />
+            <TableColumn fx:id="colunaDescricao" prefWidth="474.0" text="Descrição" />
+         </columns>
+      </TableView>
+      <Label layoutX="572.0" layoutY="169.0" text="Mês:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="mes" layoutX="615.0" layoutY="167.0" onAction="#buscar" prefWidth="150.0" />
+      <Button layoutX="355.0" layoutY="547.0" mnemonicParsing="false" onAction="#buscar" text="Imprimir Relatório">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

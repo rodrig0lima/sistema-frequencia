@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FuncionarioPrincipalController">
+   <children>
+      <Label layoutX="313.0" layoutY="50.0" text="Frequência">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabelaFrequencia" layoutX="88.0" layoutY="146.0" prefHeight="174.0" prefWidth="649.0">
+        <columns>
+          <TableColumn fx:id="colunaData" prefWidth="205.0" text="Data" />
+          <TableColumn fx:id="colunaHoraEntrada" prefWidth="233.0" text="Hora de Entrada" />
+            <TableColumn fx:id="colunaHoraSaida" prefWidth="207.0" text="Hora de Saída" />
+        </columns>
+      </TableView>
+      <Label layoutX="106.0" layoutY="343.0" text="Nome:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nome" layoutX="163.0" layoutY="343.0" prefHeight="20.0" prefWidth="566.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="393.0" text="Data:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="data" editable="false" layoutX="163.0" layoutY="391.0" promptText="DD/MM/AAAA" style="-fx-background-color: #eeeeee;" />
+      <Label layoutX="426.0" layoutY="393.0" text="Hora:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hora" editable="false" layoutX="483.0" layoutY="391.0" promptText="HH:MM:SS" style="-fx-background-color: #eeeeee;" />
+      <Label layoutX="106.0" layoutY="433.0" text="Observação:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="observacao" layoutX="195.0" layoutY="433.0" prefHeight="69.0" prefWidth="522.0" />
+      <Button fx:id="entrada" layoutX="350.0" layoutY="523.0" mnemonicParsing="false" onAction="#registrarEntrada" text="Registrar Entrada">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="saida" layoutX="357.0" layoutY="523.0" mnemonicParsing="false" onAction="#registrarSaida" text="Registrar Saida" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="679.0" layoutY="553.0" mnemonicParsing="false" onAction="#sair" prefHeight="25.0" prefWidth="68.0" text="Sair" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdministradorRelatorioMensalController">
+    <children>
+      <MenuBar prefHeight="25.0" prefWidth="800.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Arquivo">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#administradorPrincipal" text="Início" />
+                  <MenuItem mnemonicParsing="false" onAction="#sair" text="Sair" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Funcionários">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#administradorCadastrarFuncionario" text="Cadastrar Funcionário" />
+                  <MenuItem mnemonicParsing="false" onAction="#administradorListarFuncionarios" text="Listar Funcionarios" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Relatórios">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#administradorListarFrequenciasPorMes" text="Listas de frequência mensais" />
+                  <MenuItem mnemonicParsing="false" onAction="#administradorListarFrequenciaPorFuncionario" text="Listas de frequência por funcionário" />
+                  <MenuItem mnemonicParsing="false" onAction="#administradorVisualizarLog" text="Visualizar log de atividades" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ajuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#sobre" text="Sobre" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="116.0" layoutY="50.0" text="Frequência mensal dos funcionários">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="171.0" layoutY="548.0" mnemonicParsing="false" onAction="#administradorListarFrequenciasPorMes" prefHeight="30.0" prefWidth="133.0" text="Voltar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tabelaFuncionarios" layoutX="128.0" layoutY="184.0" prefHeight="329.0" prefWidth="578.0">
+         <columns>
+            <TableColumn fx:id="colunaNome" prefWidth="321.0" text="Funcionário" />
+            <TableColumn fx:id="colunaTotalHoras" prefWidth="241.0" text="Total de horas" />
+         </columns>
+      </TableView>
+      <Label layoutX="128.0" layoutY="145.0" text="Mês:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelMes" layoutX="171.0" layoutY="145.0" prefHeight="20.0" prefWidth="532.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button disable="true" layoutX="479.0" layoutY="548.0" mnemonicParsing="false" onAction="#imprimirTodas" text="Imprimir todas as frequências">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

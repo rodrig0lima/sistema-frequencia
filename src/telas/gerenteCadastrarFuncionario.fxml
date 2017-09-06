@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GerenteCadastrarFuncionarioController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="800.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Arquivo">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#gerentePrincipal" text="Início" />
+                  <MenuItem mnemonicParsing="false" onAction="#sair" text="Sair" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Funcionários">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#gerenteCadastrarFuncionario" text="Cadastrar Funcionário" />
+                  <MenuItem mnemonicParsing="false" onAction="#gerenteListarFuncionarios" text="Listar Funcionarios" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ajuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#sobre" text="Sobre" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="207.0" layoutY="50.0" text="Cadastrar Funcionário(a)">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="153.0" layoutY="208.0" text="Nome:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nome" layoutX="309.0" layoutY="205.0" prefHeight="25.0" prefWidth="340.0" />
+      <ComboBox fx:id="tipoFuncionario" layoutX="309.0" layoutY="260.0" prefHeight="25.0" prefWidth="340.0" />
+      <TextField fx:id="login" layoutX="309.0" layoutY="315.0" prefHeight="25.0" prefWidth="340.0" />
+      <PasswordField fx:id="senha" layoutX="309.0" layoutY="370.0" prefHeight="25.0" prefWidth="340.0" />
+      <Label layoutX="153.0" layoutY="318.0" text="Login:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="153.0" layoutY="372.0" text="Senha:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="153.0" layoutY="262.0" text="Tipo de Funcionário(a):">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="340.0" layoutY="474.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="30.0" prefWidth="120.0" text="Cadastrar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GerenteListarFuncionariosController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="800.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Arquivo">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#gerentePrincipal" text="Início" />
+                  <MenuItem mnemonicParsing="false" onAction="#sair" text="Sair" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Funcionários">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#gerenteCadastrarFuncionario" text="Cadastrar Funcionário" />
+                  <MenuItem mnemonicParsing="false" onAction="#gerenteListarFuncionarios" text="Listar Funcionarios" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ajuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#sobre" text="Sobre" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="242.0" layoutY="50.0" text="Listar Funcionários(as)">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="148.0" text="Buscar por nome:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nome" layoutX="246.0" layoutY="146.0" onAction="#buscar" onKeyReleased="#buscar" onKeyTyped="#buscar" prefHeight="25.0" prefWidth="460.0" />
+      <TableView fx:id="tabelaFuncionarios" layoutX="128.0" layoutY="184.0" prefHeight="329.0" prefWidth="578.0">
+        <columns>
+          <TableColumn fx:id="colunaNome" prefWidth="246.0" text="Nome" />
+          <TableColumn fx:id="colunaData" prefWidth="150.0" text="Data do Último Registro" />
+            <TableColumn fx:id="colunaHoraEntrada" prefWidth="97.0" text="Hora de Entrada" />
+            <TableColumn fx:id="colunaHoraSaida" prefWidth="83.0" text="Hora de Saída" />
+        </columns>
+      </TableView>
+      <Button layoutX="593.0" layoutY="523.0" mnemonicParsing="false" onAction="#gerenteCadastrarFuncionario" text="Novo Cadastro">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="436.0" layoutY="523.0" mnemonicParsing="false" onAction="#registrarParaFuncionario" text="Registrar Frequência">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

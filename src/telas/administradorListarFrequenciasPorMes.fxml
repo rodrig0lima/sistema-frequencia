@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdministradorListarFrequenciasPorMesController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="800.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Arquivo">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#administradorPrincipal" text="Início" />
+                  <MenuItem mnemonicParsing="false" onAction="#sair" text="Sair" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Funcionários">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#administradorCadastrarFuncionario" text="Cadastrar Funcionário" />
+                  <MenuItem mnemonicParsing="false" onAction="#administradorListarFuncionarios" text="Listar Funcionarios" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Relatórios">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#administradorListarFrequenciasPorMes" text="Listas de frequência mensais" />
+                  <MenuItem mnemonicParsing="false" onAction="#administradorListarFrequenciaPorFuncionario" text="Listas de frequência por funcionário" />
+                  <MenuItem mnemonicParsing="false" onAction="#administradorVisualizarLog" text="Visualizar log de atividades" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ajuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#sobre" text="Sobre" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Button layoutX="598.0" layoutY="522.0" mnemonicParsing="false" onAction="#visualizarMes" text="Visualizar Mês">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tabelaMeses" layoutX="128.0" layoutY="184.0" prefHeight="329.0" prefWidth="578.0">
+         <columns>
+            <TableColumn fx:id="colunaMes" editable="false" prefWidth="283.0" text="Mês" />
+            <TableColumn fx:id="colunaQtFuncionarios" editable="false" prefWidth="292.0" text="Nº de Funcionários que trabalharam no mês" />
+         </columns>
+      </TableView>
+      <Label layoutX="209.0" layoutY="50.0" text="Listar frequências por mês">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
